@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpSandbox", "CSharpSandbox\CSharpSandbox.csproj", "{CBB5FFC0-61BD-436D-A08A-C760558D633F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D19810AD-F9B2-4874-82AA-F4BE0F611FB6}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBB5FFC0-61BD-436D-A08A-C760558D633F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB5FFC0-61BD-436D-A08A-C760558D633F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB5FFC0-61BD-436D-A08A-C760558D633F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBB5FFC0-61BD-436D-A08A-C760558D633F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

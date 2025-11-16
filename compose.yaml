@@ -1,0 +1,7 @@
+﻿services:
+  csharpsandbox:
+    image: csharpsandbox
+    build:
+      context: .
+      dockerfile: CSharpSandbox/Dockerfile
+
