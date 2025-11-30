@@ -7,13 +7,32 @@ namespace CSharpSandbox.Test;
 
 public class ProgramTest
 {
-    [Fact]
-    public async Task Returns_200()
+    private readonly HttpClient _client;
+
+    public ProgramTest()
     {
         var app = new WebApplicationFactory<Program>();
-        var client = app.CreateClient();
+        _client = app.CreateClient();
+    }
 
-        var response = await client.GetAsync("/api/consume_memory");
+    [Fact]
+    public async Task Responds_200_with_message()
+    {
+        var response = await _client.GetAsync("/api/consume_memory");
+
         response.StatusCode.Should().Be(HttpStatusCode.OK);
+        (await response.Content.ReadAsStringAsync()).Should().Contain("Dict size is:");
+    }
+
+    [Fact]
+    public async Task Responds_after_multiple_requests()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            var response = await _client.GetAsync("/api/consume_memory");
+
+            response.StatusCode.Should().Be(HttpStatusCode.OK);
+            (await response.Content.ReadAsStringAsync()).Should().Contain("Dict size is:");
+        }
     }
 }
